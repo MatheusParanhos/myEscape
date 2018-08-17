@@ -1,10 +1,12 @@
 import { StackNavigator, SwitchNavigator } from 'react-navigation'
 import  Splash  from './src/Shared/components/Splash';
 import HomeScreen from './src/Shared/screens/HomeScreen';
+import Onboarding from './src/Shared/screens/OnboardingScreen';
 
 const AppStack = StackNavigator(
     {
       Home: HomeScreen,
+      Onboarding: Onboarding
     },
     {
       navigationOptions: {
