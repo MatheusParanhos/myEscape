@@ -7,6 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/react-native-popup-dialog": "^1.0.1",
+    "@types/react-navigation": "^2.0.16",
+    "@types/yup": "^0.24.9",
     "apollo-cache-persist": "^0.1.1",
     "apollo-client": "^2.4.0",
     "apollo-client-preset": "^1.0.8",
