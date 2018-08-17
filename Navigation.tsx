@@ -1,12 +1,19 @@
-import { StackNavigator, SwitchNavigator } from 'react-navigation'
+import { StackNavigator, SwitchNavigator, TabNavigator } from 'react-navigation'
 import  Splash  from './src/Shared/components/Splash';
 import HomeScreen from './src/Shared/screens/HomeScreen';
 import Onboarding from './src/Shared/screens/OnboardingScreen';
+import SaveScreen from './src/Shared/screens/SaveScreen';
+import HostsScreen from './src/Shared/screens/HostsScreen';
+import AttractionsScreen from './src/Shared/screens/AttractionsScreen';
+import ProfileScreen from './src/Shared/screens/ProfileScreen';
 
-const AppStack = StackNavigator(
+const AppStack = TabNavigator(
     {
       Home: HomeScreen,
-      Onboarding: Onboarding
+      Save: SaveScreen,
+      Hosts: HostsScreen,
+      Attractions: AttractionsScreen,
+      Profile: ProfileScreen
     },
     {
       navigationOptions: {
@@ -19,6 +26,7 @@ const AppStack = StackNavigator(
 export const Navigation = SwitchNavigator(
     {
       Splash: Splash,
+      Onboarding: Onboarding,
       App: AppStack
     },
     {
