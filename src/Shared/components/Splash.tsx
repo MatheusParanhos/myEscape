@@ -35,7 +35,7 @@ export default class Splash extends Component<Props> {
         }, 2000);
       } else {
         this.timer = setTimeout(() => {
-          this.props.navigation.navigate("Home");
+          this.props.navigation.navigate("Atrações");
         }, 2000);
       }
     });

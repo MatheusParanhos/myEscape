@@ -5,7 +5,7 @@ interface Props {}
 export default class AttractionsScreen extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}><Text>Home</Text></View>
+      <View style={styles.container}><Text>AttractionsScreen</Text></View>
     );
   }
 }
