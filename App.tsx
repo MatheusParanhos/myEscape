@@ -1,9 +1,5 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/emin93/react-native-template-typescript
+ * my escapœ
  *
  * @format
  */
@@ -11,15 +7,19 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "./Navigation";
-import { ApolloProvider } from 'react-apollo'
+import { ApolloProvider } from "react-apollo";
 import { client } from "./src/Shared/components/Apollo";
 
-console.disableYellowBox = true
+console.disableYellowBox = true;
 
 interface Props {}
 export default class App extends Component<Props> {
   render() {
-    return <ApolloProvider client={client}><Navigation /></ApolloProvider>;
+    return (
+      <ApolloProvider client={client}>
+        <Navigation />
+      </ApolloProvider>
+    );
   }
 }
 

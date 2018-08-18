@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
+import {Platform, StyleSheet, Text, View } from 'react-native';
+import { FacebookButton } from '../../Shared/components/Button'
+import { colors } from '../../Shared/theme';
 interface Props {}
 export default class AttractionsScreen extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}><Text>AttractionsScreen</Text></View>
+      <View style={styles.container}></View>
     );
   }
 }

@@ -5,7 +5,7 @@ export const deviceWidth = Dimensions.get('window').width
 export const colors = {
   primary: 'tomato',
   primaryHappy: '#4CAF50',
-  secondary: '#2c8749',
+  secondary: '#ff583a',
   secondaryHappy: '#009688',
   error: '#F44336',
   gray:'gray',
