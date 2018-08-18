@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import { colors } from '../../Shared/theme';
 
 interface Props {}
 export default class RidesScreen extends Component<Props> {
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: colors.white,
   },
   welcome: {
     fontSize: 20,
