@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import { colors } from '../../Shared/theme';
+import Header from '../components/Header';
 
 interface Props {}
 export default class SaveScreen extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}><Text>Home</Text></View>
+      <View style={styles.container}>
+      <Header title={"Salvos"} />
+        </View>
     );
   }
 }
@@ -14,8 +17,6 @@ export default class SaveScreen extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: colors.white,
   },
   welcome: {

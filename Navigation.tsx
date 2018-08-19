@@ -18,7 +18,7 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Feather from "react-native-vector-icons/Feather"
-
+import AttractionsHeader from './src/Attractions/components/Header'
 const AppStack = TabNavigator(
   {
     Perfil: {
@@ -60,7 +60,7 @@ const AppStack = TabNavigator(
           }
           return <FontAwesome5 name={iconName} size={30} color={tintColor} />;
         },
-        header: (<View/>)
+        header: (<AttractionsHeader />)
       })
     },
     Salvos: {

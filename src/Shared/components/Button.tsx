@@ -13,6 +13,10 @@ interface GradientButtonProps {
   secondColor: string;
   onPress: any
 }
+interface FacebookButtonProps {
+  title: String;
+  onPress: any
+}
 
 export class Button extends Component<ButtonProps> {
   render() {
@@ -47,7 +51,7 @@ export class OutlinedButton extends Component<ButtonProps> {
     );
   }
 }
-export class FacebookButton extends Component<GradientButtonProps> {
+export class FacebookButton extends Component<FacebookButtonProps> {
   render() {
     return (
       <TouchableOpacity onPress={this.props.onPress}>
