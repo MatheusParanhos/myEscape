@@ -8,17 +8,17 @@ import {
 } from "react-native";
 import { colors } from "../../Shared/theme";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-interface AttractionSaveProps {
+interface HostSaveProps {
   onPress: any;
   // isPressed: any
 }
-interface AttractionSaveState {
+interface HostSaveState {
   isPressed: boolean;
 }
 
-export default class AttractionSave extends Component<
-  AttractionSaveProps,
-  AttractionSaveState
+export default class HostSave extends Component<
+  HostSaveProps,
+  HostSaveState
 > {
   constructor() {
     // @ts-ignore

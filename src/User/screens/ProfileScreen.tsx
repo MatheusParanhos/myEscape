@@ -19,6 +19,7 @@ export default class ProfileScreen extends Component<Props> {
             onPress={() => console.log("pressed")}
             title={"Login via Facebook"}
           />
+          <Text style={{margin: 20, fontWeight:'500', color: colors.lightGray}}>Ou então:</Text>
           <OutlinedButton
             onPress={() => console.log("pressed")}
             title={"Login via celular"}
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 0.8,
     width: deviceWidth,
     alignItems: "center",
-    justifyContent: "space-around"
+    justifyContent: "center",
     // backgroundColor:'yellow'
   }
 });

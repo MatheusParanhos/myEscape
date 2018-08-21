@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { colors } from "../../Shared/theme";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-interface AttractionRateProps {
+interface HostRateProps {
   rate: Number;
 }
 
-export default class AttractionsRate extends Component<AttractionRateProps> {
+export default class HostRate extends Component<HostRateProps> {
   renderStar = () => {
     if (this.props.rate < 1) {
       return (

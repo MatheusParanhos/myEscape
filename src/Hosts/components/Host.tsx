@@ -1,39 +1,40 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { colors } from "../../Shared/theme";
-import AttractionImage from "./Attraction.image";
-import AttractionTitle from "./Attraction.title";
-import AttractionRate from "./Attraction.rate";
-import AttractionLocation from "./Attraction.location";
-import AttractionSave from "./Attraction.save";
-interface AttractionProps {
-  attractionTitle: string
+import HostImage from "./Host.image";
+import HostTitle from "./Host.title";
+import HostRate from "./Host.rate";
+import HostLocation from "./Host.location";
+import HostSave from "./Host.save";
+
+interface HostProps {
+  hostTitle: string
   onSavePress: any
   location: string
   rate: number
 }
 
-export default class Attraction extends Component<AttractionProps> {
+export default class Host extends Component<HostProps> {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <AttractionImage />
+          <HostImage />
         </View>
         <View style={styles.centralContainer}>
           <View style={styles.titleContainer}>
-            <AttractionTitle title={this.props.attractionTitle}/>
+            <HostTitle title={this.props.hostTitle}/>
           </View>
           <View style={styles.rateContainer}>
-            <AttractionRate rate={this.props.rate} />
+            <HostRate rate={this.props.rate} />
           </View>
           <View style={styles.locationContainer} >
-            <AttractionLocation location={this.props.location}/>
+            <HostLocation location={this.props.location}/>
           </View>
           
         </View>
         <View style={styles.saveContainer} >
-            <AttractionSave onPress={this.props.onSavePress}/>
+            <HostSave onPress={this.props.onSavePress}/>
         </View>
       </View>
     );

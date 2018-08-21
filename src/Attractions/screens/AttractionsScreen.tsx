@@ -1,17 +1,28 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
-import { FacebookButton } from "../../Shared/components/Button";
-import { colors } from "../../Shared/theme";
 import Header from "../components/Header";
 import Attraction from "../components/Attraction";
+
 interface Props {}
+
 export default class AttractionsScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
         <Header title={"Atrações"} />
-        <Attraction/>
-        <Attraction/>
+        <Attraction
+          attractionTitle={"Cachoeira Santa Bárbara"}
+          onSavePress={() => console.log("salvou")}
+          location={"Alto Paraiso"}
+          rate={3}
+
+        />
+        <Attraction
+          attractionTitle={"Cachoeira da fumacinha"}
+          onSavePress={() => console.log("clicko")}
+          location={"São Jorge"}
+          rate={4.2}
+        />
       </View>
     );
   }

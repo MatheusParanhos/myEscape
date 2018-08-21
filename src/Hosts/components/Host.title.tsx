@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { colors, fontSize, fontWeight } from "../../Shared/theme";
 
-interface AttractionTitleProps {
+interface HostTitleProps {
   title: string
 }
 
-export default class AttractionTitle extends Component<AttractionTitleProps> {
+export default class HostTitle extends Component<HostTitleProps> {
   render() {
     return <Text style={styles.text}>{this.props.title}</Text>;
   }
