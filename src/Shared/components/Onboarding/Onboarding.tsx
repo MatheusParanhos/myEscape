@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import Onboarding from '../components/Onboarding/Onboarding'
-interface Props {}
-export default class OnboardingScreen extends Component<Props> {
+
+interface OnboardingProps {}
+export default class Onboarding extends Component<OnboardingProps> {
   render() {
     return (
-      <View style={styles.container}><Onboarding/></View>
+      <View style={styles.container}><Text>AAARRONCA</Text></View>
     );
   }
 }

@@ -7,7 +7,7 @@ import React from "react";
 import { View } from "react-native";
 import Splash from "./src/Shared/components/Splash";
 import HomeScreen from "./src/Shared/screens/HomeScreen";
-import Onboarding from "./src/Shared/screens/OnboardingScreen";
+import OnboardingScreen from "./src/Shared/screens/OnboardingScreen";
 import SaveScreen from "./src/Saved/screens/SaveScreen";
 import HostsScreen from "./src/Hosts/screens/HostsScreen";
 import AttractionsScreen from "./src/Attractions/screens/AttractionsScreen";
@@ -18,7 +18,7 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Feather from "react-native-vector-icons/Feather"
-import AttractionsHeader from './src/Attractions/components/Header'
+
 const AppStack = TabNavigator(
   {
     Perfil: {
@@ -60,7 +60,7 @@ const AppStack = TabNavigator(
           }
           return <FontAwesome5 name={iconName} size={30} color={tintColor} />;
         },
-        header: (<AttractionsHeader />)
+        header: (<View />)
       })
     },
     Salvos: {
@@ -110,7 +110,7 @@ const AppStack = TabNavigator(
 export const Navigation = SwitchNavigator(
   {
     Splash: Splash,
-    Onboarding: Onboarding,
+    Onboarding: OnboardingScreen,
     App: AppStack
   },
   {

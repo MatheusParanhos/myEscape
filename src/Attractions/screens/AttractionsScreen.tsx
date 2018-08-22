@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
-import Header from "../components/Header";
+import Header from "../../Shared/components/Header";
 import Attraction from "../components/Attraction";
 
 interface Props {}
@@ -9,7 +9,7 @@ export default class AttractionsScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Header title={"Atrações"} />
+        <Header title={"Atrações"} filter/>
         <Attraction
           attractionTitle={"Cachoeira Santa Bárbara"}
           onSavePress={() => console.log("salvou")}

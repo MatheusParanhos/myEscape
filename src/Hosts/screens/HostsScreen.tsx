@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { colors } from "../../Shared/theme";
-import Header from "../../Saved/components/Header";
+import Header from "../../Shared/components/Header";
 import Host from "../components/Host";
 
 interface Props {}
@@ -9,7 +9,7 @@ export default class HostsScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Header title={"Hospedagens"} />
+        <Header title={"Hospedagens"} filter/>
         <Host
           hostTitle={"Hostel vrau"}
           onSavePress={() => console.log("salvou")}
@@ -24,7 +24,6 @@ export default class HostsScreen extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
     alignItems: "center",
     backgroundColor: colors.white
   },

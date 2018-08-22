@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { colors, deviceWidth } from "../../Shared/theme";
 import { FacebookButton, OutlinedButton } from "../../Shared/components/Button";
+import Header from "../../Shared/components/Header";
+
 
 interface Props {}
 export default class ProfileScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.headerContainer}>
-          <Text>Perfil</Text>
-        </View>
+        <Header title={'Perfil'} />
         <View style={styles.messageContainer}>
           <Text style={{fontWeight:'500'}}>Você precisa estar logado para ver o seu perfil</Text>
         </View>
