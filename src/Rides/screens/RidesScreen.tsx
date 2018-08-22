@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 import { colors, deviceWidth, fontFamiliy, fontSize } from "../../Shared/theme";
 import Header from "../../Shared/components/Header";
 import { FacebookButton, OutlinedButton } from "../../Shared/components/Button";
+import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 
 interface Props {}
 export default class RidesScreen extends Component<Props> {
@@ -11,9 +12,10 @@ export default class RidesScreen extends Component<Props> {
       <View style={styles.container}>
         <Header title={'Caronas'} filter={false}/>
         <View style={styles.messageContainer}>
-          <Text style={{ fontWeight: "500", fontFamily:fontFamiliy.primary, fontSize:fontSize.big, textAlign:'center' }}>
+        <Text style={{ marginHorizontal:50, color:colors.lightGray, fontWeight: "500", fontFamily:fontFamiliy.primary, fontSize:fontSize.big, textAlign:'center' }}>
             Você precisa estar logado para pedir ou dar caronas!
           </Text>
+          <FontAwesome5Icon name={'kiss-wink-heart'} size={35} style={{margin:25}} color={colors.primary}/>
         </View>
         <View style={styles.buttonContainer}>
           <FacebookButton

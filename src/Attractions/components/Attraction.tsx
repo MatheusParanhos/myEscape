@@ -11,6 +11,7 @@ interface AttractionProps {
   onSavePress: any
   location: string
   rate: number
+  source: any
 }
 
 export default class Attraction extends Component<AttractionProps> {
@@ -18,7 +19,7 @@ export default class Attraction extends Component<AttractionProps> {
     return (
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <AttractionImage />
+          <AttractionImage source={this.props.source}/>
         </View>
         <View style={styles.centralContainer}>
           <View style={styles.titleContainer}>

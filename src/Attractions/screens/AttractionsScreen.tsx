@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import Header from "../../Shared/components/Header";
 import Attraction from "../components/Attraction";
+import Spacer from "../../Shared/components/Spacer";
 
 interface Props {}
 
@@ -10,18 +11,20 @@ export default class AttractionsScreen extends Component<Props> {
     return (
       <View style={styles.container}>
         <Header title={"Atrações"} filter/>
+        <Spacer title={'Atrações'} />
         <Attraction
-          attractionTitle={"Cachoeira Santa Bárbara"}
+          attractionTitle={"Vista secreta"}
           onSavePress={() => console.log("salvou")}
-          location={"Alto Paraiso"}
+          location={"São Jorge"}
           rate={3}
-
+          source={require('../../Shared/medias/chapada2.png')}
         />
         <Attraction
-          attractionTitle={"Cachoeira da fumacinha"}
+          attractionTitle={"Cachoeira do segredo"}
           onSavePress={() => console.log("clicko")}
           location={"São Jorge"}
           rate={4.2}
+          source={require('../../Shared/medias/chapada3.png')}
         />
       </View>
     );

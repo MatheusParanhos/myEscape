@@ -12,6 +12,7 @@ interface HostProps {
   onSavePress: any
   location: string
   rate: number
+  source: any
 }
 
 export default class Host extends Component<HostProps> {
@@ -19,7 +20,7 @@ export default class Host extends Component<HostProps> {
     return (
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <HostImage />
+          <HostImage source={this.props.source}/>
         </View>
         <View style={styles.centralContainer}>
           <View style={styles.titleContainer}>

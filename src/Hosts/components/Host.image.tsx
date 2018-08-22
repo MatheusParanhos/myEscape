@@ -4,13 +4,13 @@ import { colors } from '../../Shared/theme';
 import { Avatar } from '../../Shared/components/Image';
 
 interface HostImageProps {
-
+source: any
 }
 
 export default class HostImage extends Component <HostImageProps>{
   render() {
     return (
-        <Avatar source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/Chapada_diamantina.jpg'}}/>
+        <Avatar source={this.props.source}/>
     )
   }
 }
