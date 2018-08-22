@@ -39,7 +39,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -53,6 +53,11 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Proxima Nova Condensed Bold.otf</string>
+		<string>Proxima Nova Bold.otf</string>
+		<string>ProximaNova-Regular.otf</string>
+		<string>Proxima Nova Alt Bold.otf</string>
+		<string>Sweet Movements.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
 		<string>Feather.ttf</string>

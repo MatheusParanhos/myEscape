@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { colors, deviceWidth, fontSize, fontWeight } from "../theme";
+import { colors, deviceWidth, fontSize, fontWeight, fontFamiliy } from "../theme";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 interface HeaderProps {
   title: string;
@@ -9,7 +9,7 @@ interface HeaderProps {
 export default class Header extends Component<HeaderProps> {
   renderIcon() {
     if (this.props.filter) {
-      return <FontAwesome name={"th-list"} size={25} color={colors.darkGray} />;
+      return <FontAwesome name={"th-list"} size={25} color={colors.white} />;
     }
   }
   render() {
@@ -22,17 +22,18 @@ export default class Header extends Component<HeaderProps> {
             width: "100%",
             alignItems: "center",
             justifyContent: "flex-end",
-            marginBottom: 15
+          //  marginBottom: 15
           }}
         >
           <Text
             style={{
-              color: colors.darkGray,
-              fontSize: fontSize.header,
-              fontWeight: '600'
+              color: colors.white,
+              fontSize: 35,
+              fontWeight: '600',
+              fontFamily: fontFamiliy.type,
             }}
           >
-            {this.props.title}{" "}
+            my escape
           </Text>
         </View>
         <View
@@ -41,7 +42,7 @@ export default class Header extends Component<HeaderProps> {
             alignItems: "center",
             width: "100%",
             justifyContent: "flex-end",
-            marginBottom: 10
+            marginBottom: 15
           }}
         >
           {this.renderIcon()}
@@ -55,7 +56,8 @@ const styles = StyleSheet.create({
   container: {
     top: 0,
     height: 70,
-    flexDirection: "row"
+    flexDirection: "row",
+    backgroundColor:colors.primary
   },
   icon: {
     position: "absolute",

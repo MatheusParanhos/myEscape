@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, PanResponder } from 'react-native';
 
 interface OnboardingProps {}
 export default class Onboarding extends Component<OnboardingProps> {
   render() {
     return (
-      <View style={styles.container}><Text>AAARRONCA</Text></View>
+      <View style={styles.container}><Text style={{fontFamily:'ProximaNova-Regular'}}>AAARRONCA</Text></View>
     );
   }
 }

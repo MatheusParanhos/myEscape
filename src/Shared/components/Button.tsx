@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
-import { deviceWidth, colors } from "../theme";
+import { deviceWidth, colors, fontFamiliy } from "../theme";
 import LinearGradient from "react-native-linear-gradient";
 import Entypo from "react-native-vector-icons/Entypo"
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 interface ButtonProps {
   title: String;
   onPress: any
@@ -38,11 +39,13 @@ export class OutlinedButton extends Component<ButtonProps> {
         <View
           style={{
             flex: 1,
+            flexDirection:'row',
             justifyContent: "center",
             alignItems: "center"
           }}
         >
-          <Text style={{ color: colors.primary, fontWeight: "bold" }}>
+        <MaterialCommunityIcons name={'cellphone'} size={30} color={colors.primary} style={{marginRight:10 }}/>
+          <Text style={{ color: colors.primary, fontWeight: "bold", fontFamily:fontFamiliy.primary, }}>
             {" "}
             {this.props.title}{" "}
           </Text>
@@ -58,7 +61,7 @@ export class FacebookButton extends Component<FacebookButtonProps> {
         <LinearGradient start={{x:0, y:0}} end={{x:1, y:1}} colors={["#3e33cc", "#0f0584"]}>
           <View style={styles.facebookContainer}>
             <Entypo name={'facebook'} size={30} color={colors.white} style={{marginRight:10 }}/>
-            <Text style={{ color: colors.white, fontWeight:'bold' }}> {this.props.title} </Text>
+            <Text style={{ color: colors.white, fontWeight:'bold', fontFamily:fontFamiliy.primary, }}> {this.props.title} </Text>
           </View>
         </LinearGradient>
       </TouchableOpacity>

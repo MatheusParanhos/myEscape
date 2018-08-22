@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { colors, fontSize, fontWeight } from "../../Shared/theme";
+import { colors, fontSize, fontWeight, fontFamiliy } from "../../Shared/theme";
 
 interface HostTitleProps {
   title: string
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: fontSize.primary,
     fontWeight: '600',
-    color: colors.darkGray
+    color: colors.darkGray,
+    fontFamily:fontFamiliy.primary
   }
 });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
-import { colors, deviceWidth } from "../../Shared/theme";
+import { colors, deviceWidth, fontFamiliy, fontSize } from "../../Shared/theme";
 import Header from "../../Shared/components/Header";
 import { FacebookButton, OutlinedButton } from "../../Shared/components/Button";
 
@@ -11,7 +11,7 @@ export default class RidesScreen extends Component<Props> {
       <View style={styles.container}>
         <Header title={'Caronas'} filter={false}/>
         <View style={styles.messageContainer}>
-          <Text style={{ fontWeight: "500" }}>
+          <Text style={{ fontWeight: "500", fontFamily:fontFamiliy.primary, fontSize:fontSize.big, textAlign:'center' }}>
             Você precisa estar logado para pedir ou dar caronas!
           </Text>
         </View>
@@ -21,7 +21,7 @@ export default class RidesScreen extends Component<Props> {
             title={"Login via Facebook"}
           />
           <Text
-            style={{ margin: 20, fontWeight: "500", color: colors.lightGray }}
+            style={{ margin: 20, fontWeight: "500", color: colors.primary, fontFamily:fontFamiliy.primary, }}
           >
             Ou então:
           </Text>

@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View, TimerMixin } from "react-native";
 import { Navigation } from "../../../Navigation";
 import { NavigationScreenProps } from "react-navigation";
 import { AsyncStorage } from "react-native";
+import { colors, fontFamiliy } from "../theme";
 
 interface Props extends NavigationScreenProps<any> {}
 var TimerMixin = require("react-timer-mixin");
@@ -42,7 +43,14 @@ export default class Splash extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Logo</Text>
+        <Text
+            style={{
+              color: colors.white,
+              fontSize: 60,
+              fontWeight: '600',
+              fontFamily: fontFamiliy.type,
+            }}
+          >my escape</Text>
       </View>
     );
   }
@@ -53,6 +61,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: colors.primary
   }
 });

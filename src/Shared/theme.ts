@@ -12,7 +12,7 @@ export const colors = {
   gray:'gray',
   lightGray: '#afafaf',
   white:'white',
-  gold: 'yellow'
+  gold: '#ff583a'
 }
 
 export const spacing = {
@@ -31,4 +31,10 @@ export const fontSize = {
 export const fontWeight ={
   primary: '500',
   header: '600',
+}
+
+export const fontFamiliy ={
+  primary: 'ProximaNova-Regular',
+  primaryBold:'ProximaNovaA-Bold',
+  type:'SweetMovementsPersonalUse' 
 }

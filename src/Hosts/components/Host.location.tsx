@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { colors, fontSize } from "../../Shared/theme";
+import { colors, fontSize, fontFamiliy } from "../../Shared/theme";
 
 interface HostLocationProps {
   location: string;
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   text:{
     fontSize: fontSize.smaller,
     fontWeight: '500',
-    color: colors.lightGray
+    color: colors.lightGray,
+    fontFamily:fontFamiliy.primary
   }
 });
