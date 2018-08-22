@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "hostTitle":"Pousada Meu Talento",
+        "hostRate": 4.5,
+        "hostLocation": "São Jorge",
+        "hostImage": "https://i.pinimg.com/736x/f1/91/5f/f1915fc786d34eb2854699a06b51d9d3--slide-show-road-trip.jpg"
+    },
+    {
+        "id":2,
+        "hostTitle":"Pousada Alfa & Omega",
+        "hostRate": 4.5,
+        "hostLocation": "São Jorge",
+        "hostImage": "https://igx.4sqi.net/img/general/600x600/6557251_dijPNULPiQk08YnD9mRp2UfCNsqio_vG7fVTrZvWJK0.jpg"
+    }
+]

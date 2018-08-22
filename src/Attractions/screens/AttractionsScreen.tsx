@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 import Header from "../../Shared/components/Header";
 import Attraction from "../components/Attraction";
 import Spacer from "../../Shared/components/Spacer";
+import AttractionsContainer from "../containers/AttractionsContainer";
 
 interface Props {}
 
@@ -12,7 +13,8 @@ export default class AttractionsScreen extends Component<Props> {
       <View style={styles.container}>
         <Header title={"Atrações"} filter/>
         <Spacer title={'Atrações'} />
-        <Attraction
+        <AttractionsContainer />
+        {/* <Attraction
           attractionTitle={"Vista secreta"}
           onSavePress={() => console.log("salvou")}
           location={"São Jorge"}
@@ -25,7 +27,7 @@ export default class AttractionsScreen extends Component<Props> {
           location={"São Jorge"}
           rate={4.2}
           source={require('../../Shared/medias/chapada3.png')}
-        />
+        /> */}
       </View>
     );
   }

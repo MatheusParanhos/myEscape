@@ -6,6 +6,7 @@ import AttractionTitle from "./Attraction.title";
 import AttractionRate from "./Attraction.rate";
 import AttractionLocation from "./Attraction.location";
 import AttractionSave from "./Attraction.save";
+// import attractionsData from '../data/attractions.json'
 interface AttractionProps {
   attractionTitle: string
   onSavePress: any
@@ -15,6 +16,9 @@ interface AttractionProps {
 }
 
 export default class Attraction extends Component<AttractionProps> {
+  componentDidMount() {
+   // console.log(attractionsData)
+  }
   render() {
     return (
       <View style={styles.container}>

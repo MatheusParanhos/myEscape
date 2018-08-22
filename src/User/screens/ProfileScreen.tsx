@@ -10,7 +10,7 @@ export default class ProfileScreen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Header title={"Perfil"} />
+        <Header title={"Perfil"} filter={false}/>
         <View style={styles.messageContainer}>
         <Text style={{ marginHorizontal:50, color:colors.lightGray, fontWeight: "500", fontFamily:fontFamiliy.primary, fontSize:fontSize.big, textAlign:'center' }}>
             Você precisa estar logado para ver o seu perfil

@@ -4,6 +4,7 @@ import { colors } from "../../Shared/theme";
 import Header from "../../Shared/components/Header";
 import Host from "../components/Host";
 import Spacer from "../../Shared/components/Spacer";
+import HostsContainer from "../containers/HostsContainer";
 
 interface Props {}
 export default class HostsScreen extends Component<Props> {
@@ -13,13 +14,14 @@ export default class HostsScreen extends Component<Props> {
         <Header title={"Hospedagens"} filter/>
         
         <Spacer title={'Hospedagens'}/>
-        <Host
+        {/* <Host
           hostTitle={"Hostel Aventura"}
           onSavePress={() => console.log("salvou")}
           location={"Alto Paraiso"}
           rate={3}
           source={require('../../Shared/medias/hostel1.2.png')}
-        />
+        /> */}
+        <HostsContainer/>
 
       </View>
     );

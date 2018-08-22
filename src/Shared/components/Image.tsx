@@ -14,7 +14,7 @@ export const Avatar = props => {
           resizeMode="contain"
           resizeMethod="scale"
           style={styles.image}
-          source={source}
+          source={{uri:source.toString()}}
         />
       </View>
     </TouchableOpacity>
