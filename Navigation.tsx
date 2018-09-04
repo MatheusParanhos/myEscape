@@ -17,7 +17,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Feather from "react-native-vector-icons/Feather"
+import Feather from "react-native-vector-icons/Feather";
 
 const AppStack = TabNavigator(
   {
@@ -27,12 +27,12 @@ const AppStack = TabNavigator(
         tabBarIcon: ({ focused, tintColor }) => {
           const { routeName } = navigation.state;
           let iconName;
-          if (routeName === 'Perfil') {
+          if (routeName === "Perfil") {
             iconName = `user`;
           }
           return <Feather name={iconName} size={30} color={tintColor} />;
         },
-        header: (<View/>)
+        header: <View />
       })
     },
     Hospedagens: {
@@ -41,12 +41,18 @@ const AppStack = TabNavigator(
         tabBarIcon: ({ focused, tintColor }) => {
           const { routeName } = navigation.state;
           let iconName;
-          if (routeName === 'Hospedagens') {
+          if (routeName === "Hospedagens") {
             iconName = `hotel`;
           }
-          return <MaterialCommunityIcons name={iconName} size={30} color={tintColor} />;
+          return (
+            <MaterialCommunityIcons
+              name={iconName}
+              size={30}
+              color={tintColor}
+            />
+          );
         },
-        header: (<View/>)
+        header: <View />
       })
     },
     Atrações: {
@@ -55,12 +61,12 @@ const AppStack = TabNavigator(
         tabBarIcon: ({ focused, tintColor }) => {
           const { routeName } = navigation.state;
           let iconName;
-          if (routeName === 'Atrações') {
-            iconName = `smile${focused ? '-beam' : ''}`;
+          if (routeName === "Atrações") {
+            iconName = `smile${focused ? "-beam" : ""}`;
           }
           return <FontAwesome5 name={iconName} size={30} color={tintColor} />;
         },
-        header: (<View />)
+        header: <View />
       })
     },
     Salvos: {
@@ -69,12 +75,12 @@ const AppStack = TabNavigator(
         tabBarIcon: ({ focused, tintColor }) => {
           const { routeName } = navigation.state;
           let iconName;
-          if (routeName === 'Salvos') {
-            iconName = `bookmark${focused ? '' : '-o'}`;
+          if (routeName === "Salvos") {
+            iconName = `bookmark${focused ? "" : "-o"}`;
           }
           return <FontAwesome name={iconName} size={30} color={tintColor} />;
         },
-        header: (<View/>)
+        header: <View />
       })
     },
     Caronas: {
@@ -83,25 +89,29 @@ const AppStack = TabNavigator(
         tabBarIcon: ({ focused, tintColor }) => {
           const { routeName } = navigation.state;
           let iconName;
-          if (routeName === 'Caronas') {
-            iconName = `car${focused ? '-connected' : ''}`;
+          if (routeName === "Caronas") {
+            iconName = `car${focused ? "-connected" : ""}`;
           }
-          return <MaterialCommunityIcons name={iconName} size={30} color={tintColor} />;
+          return (
+            <MaterialCommunityIcons
+              name={iconName}
+              size={30}
+              color={tintColor}
+            />
+          );
         },
-        header: (<View/>)
+        header: <View />
       })
-    },
+    }
   },
   {
-    navigationOptions: ({ navigation }) => ({
-      
-    }),
+    navigationOptions: ({ navigation }) => ({}),
     tabBarOptions: {
       activeTintColor: "tomato",
       inactiveTintColor: "gray",
-      style:{
-        backgroundColor:'white',
-        borderTopColor:'transparent'
+      style: {
+        backgroundColor: "white",
+        borderTopColor: "transparent"
       }
     }
   }

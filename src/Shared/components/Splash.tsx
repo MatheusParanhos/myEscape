@@ -25,7 +25,7 @@ export default class Splash extends Component<Props> {
     this.getUserInfo();
   }
   getUserInfo() {
-   //AsyncStorage.clear()
+   // AsyncStorage.clear()
     AsyncStorage.getItem("userInfo").then(response => {
       if (response === null) {
         this.setState({ firstTime: true });

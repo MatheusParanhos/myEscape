@@ -7,8 +7,8 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "./Navigation";
-import { ApolloProvider } from "react-apollo";
-import { client } from "./src/Shared/components/Apollo";
+import UserContext from "./src/User/UserContext";
+
 
 console.disableYellowBox = true;
 
@@ -16,9 +16,9 @@ interface Props {}
 export default class App extends Component<Props> {
   render() {
     return (
-      <ApolloProvider client={client}>
+      <UserContext>
         <Navigation />
-      </ApolloProvider>
+      </UserContext>
     );
   }
 }
