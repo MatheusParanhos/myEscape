@@ -10,6 +10,7 @@
     "@types/react-native-popup-dialog": "^1.0.1",
     "@types/react-native-video": "^2.0.6",
     "@types/react-navigation": "^2.0.16",
+    "@types/realm": "^1.13.0",
     "@types/yup": "^0.24.9",
     "apollo-cache-persist": "^0.1.1",
     "apollo-client": "^2.4.0",
@@ -32,6 +33,7 @@
     "react-native-video": "^3.2.0",
     "react-navigation": "^2.11.2",
     "react-timer-mixin": "^0.13.4",
+    "realm": "^2.15.3",
     "yup": "^0.26.2"
   },
   "devDependencies": {
