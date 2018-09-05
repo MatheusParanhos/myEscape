@@ -4,10 +4,12 @@ import { deviceWidth, colors, fontFamiliy } from "../theme";
 import LinearGradient from "react-native-linear-gradient";
 import Entypo from "react-native-vector-icons/Entypo"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
-interface ButtonProps {
+type ButtonProps = {
   title: String;
   onPress: any
-}
+  name?: string
+} 
+
 interface GradientButtonProps {
   title: String;
   firstColor: string;
@@ -32,8 +34,13 @@ export class Button extends Component<ButtonProps> {
     );
   }
 }
-export class OutlinedButton extends Component<ButtonProps> {
+
+export class OutlinedButton extends Component<ButtonProps, {}> {
+  public static defaultProps: Partial<ButtonProps> = {
+    name: "cellphone"
+};
   render() {
+    const { name } = this.props
     return (
       <TouchableOpacity style={styles.outlineContainer} onPress={this.props.onPress}>
         <View
@@ -44,7 +51,7 @@ export class OutlinedButton extends Component<ButtonProps> {
             alignItems: "center"
           }}
         >
-        <MaterialCommunityIcons name={'cellphone'} size={30} color={colors.primary} style={{marginRight:10 }}/>
+        <MaterialCommunityIcons name={name} size={30} color={colors.primary} style={{marginRight:10 }}/>
           <Text style={{ color: colors.primary, fontWeight: "bold", fontFamily:fontFamiliy.primary, }}>
             {" "}
             {this.props.title}{" "}
@@ -97,7 +104,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection:'row'
-    // backgroundColor: colors.primary
   },
   outlineContainer: {
     height: 50,
@@ -106,7 +112,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 3,
     borderColor: colors.primary
-    // borderRadius:100
-    // backgroundColor: colors.primary
   }
 });

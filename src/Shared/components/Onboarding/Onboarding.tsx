@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, PanResponder } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 interface OnboardingProps {}
 export default class Onboarding extends Component<OnboardingProps> {

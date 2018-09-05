@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, TimerMixin } from "react-native";
-import { Navigation } from "../../../Navigation";
+import { StyleSheet, Text, View } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
 import { AsyncStorage } from "react-native";
 import { colors, fontFamiliy } from "../theme";
 
 interface Props extends NavigationScreenProps<any> {}
-var TimerMixin = require("react-timer-mixin");
 
 export default class Splash extends Component<Props> {
   timer: number;
@@ -22,10 +20,11 @@ export default class Splash extends Component<Props> {
     clearTimeout(this.timer);
   }
   componentDidMount() {
+   //  AsyncStorage.clear();
+
     this.getUserInfo();
   }
   getUserInfo() {
-   // AsyncStorage.clear()
     AsyncStorage.getItem("userInfo").then(response => {
       if (response === null) {
         this.setState({ firstTime: true });
@@ -43,14 +42,7 @@ export default class Splash extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text
-            style={{
-              color: colors.white,
-              fontSize: 60,
-              fontWeight: '600',
-              fontFamily: fontFamiliy.type,
-            }}
-          >my escape</Text>
+        <Text style={styles.text}>my escape</Text>
       </View>
     );
   }
@@ -62,5 +54,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: colors.primary
+  },
+  text: {
+    color: colors.white,
+    fontSize: 60,
+    fontWeight: "600",
+    fontFamily: fontFamiliy.type
   }
 });

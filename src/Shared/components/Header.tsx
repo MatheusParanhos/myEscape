@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { colors, deviceWidth, fontSize, fontWeight, fontFamiliy } from "../theme";
+import { colors, deviceWidth, fontFamiliy } from "../theme";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 interface HeaderProps {
   title: string;

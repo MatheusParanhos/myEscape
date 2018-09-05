@@ -1,30 +1,16 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import Onboarding from '../components/Onboarding/Onboarding'
-interface Props {}
+import React, { Component } from "react";
+import { StyleSheet } from "react-native";
+import OnboardingContainer from "../containers/OnboardingContainer";
+interface Props {
+  navigation: any;
+}
 export default class OnboardingScreen extends Component<Props> {
+  componentDidMount() {
+    console.log(this.props);
+  }
   render() {
-    return (
-      <View style={styles.container}><Onboarding/></View>
-    );
+    console.log(this.props);
+    return <OnboardingContainer {...this.props} />;
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
