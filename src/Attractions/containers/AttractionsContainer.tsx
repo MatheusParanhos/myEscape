@@ -37,8 +37,8 @@ export default class AttractionsContainer extends Component {
                         saveAttraction(item)
                         // setAttraction(item);
                       }}
-                      location={item.attractionLocation}
-                      rate={item.attractionRate}
+                      location={item.city}
+                      rate={item.rate}
                     />
                   );
                 }}

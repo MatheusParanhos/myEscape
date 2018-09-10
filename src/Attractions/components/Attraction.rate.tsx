@@ -15,7 +15,7 @@ export default class AttractionsRate extends Component<AttractionRateProps> {
         </View>
       );
     }
-    if (this.props.rate > 1 && this.props.rate < 2) {
+    if (this.props.rate > 0.99 && this.props.rate < 2) {
       return (
         <View style={styles.container}>
           <View style={styles.starContainer}>
@@ -31,31 +31,9 @@ export default class AttractionsRate extends Component<AttractionRateProps> {
         </View>
       );
     }
-    if (this.props.rate > 2 && this.props.rate < 3) {
+    if (this.props.rate > 1.99 && this.props.rate < 3) {
       return (
         <View style={styles.container}>
-          <View style={styles.starContainer}>
-            <FontAwesome name={"star"} size={25} color={colors.gold} />
-          </View>
-          <View style={styles.starContainer}>
-            <FontAwesome name={"star"} size={25} color={colors.gold} />
-          </View>
-          <View style={styles.starContainer}>
-            <FontAwesome
-              name={"star-half-full"}
-              size={25}
-              color={colors.gold}
-            />
-          </View>
-        </View>
-      );
-    }
-    if (this.props.rate > 3 && this.props.rate < 4) {
-      return (
-        <View style={styles.container}>
-          <View style={styles.starContainer}>
-            <FontAwesome name={"star"} size={25} color={colors.gold} />
-          </View>
           <View style={styles.starContainer}>
             <FontAwesome name={"star"} size={25} color={colors.gold} />
           </View>
@@ -72,7 +50,29 @@ export default class AttractionsRate extends Component<AttractionRateProps> {
         </View>
       );
     }
-    if (this.props.rate > 4 && this.props.rate < 5) {
+    if (this.props.rate > 2.99 && this.props.rate < 4) {
+      return (
+        <View style={styles.container}>
+          <View style={styles.starContainer}>
+            <FontAwesome name={"star"} size={25} color={colors.gold} />
+          </View>
+          <View style={styles.starContainer}>
+            <FontAwesome name={"star"} size={25} color={colors.gold} />
+          </View>
+          <View style={styles.starContainer}>
+            <FontAwesome name={"star"} size={25} color={colors.gold} />
+          </View>
+          <View style={styles.starContainer}>
+            <FontAwesome
+              name={"star-half-full"}
+              size={25}
+              color={colors.gold}
+            />
+          </View>
+        </View>
+      );
+    }
+    if (this.props.rate > 3.99 && this.props.rate < 4.99) {
       return (
         <View style={styles.container}>
           <View style={styles.starContainer}>
@@ -104,11 +104,16 @@ export default class AttractionsRate extends Component<AttractionRateProps> {
             <FontAwesome name={"star"} size={25} color={colors.gold} />
           </View>
           <View style={styles.starContainer}>
-            <FontAwesome
-              name={"star-half-full"}
-              size={25}
-              color={colors.gold}
-            />
+            <FontAwesome name={"star"} size={25} color={colors.gold} />
+          </View>
+          <View style={styles.starContainer}>
+            <FontAwesome name={"star"} size={25} color={colors.gold} />
+          </View>
+          <View style={styles.starContainer}>
+            <FontAwesome name={"star"} size={25} color={colors.gold} />
+          </View>
+          <View style={styles.starContainer}>
+          <FontAwesome name={"star"} size={25} color={colors.gold} />
           </View>
         </View>
       );

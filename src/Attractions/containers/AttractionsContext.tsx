@@ -20,6 +20,7 @@ const initialState = {
 export default class AttractionProvider extends React.Component {
   persistContext: any;
   attraction: {};
+  attractions: any;
   constructor() {
     super();
     this.state = {
@@ -30,6 +31,7 @@ export default class AttractionProvider extends React.Component {
 
   componentDidMount() {
     console.log('comp will mount')
+    initializeDatabase()
     // Open Database
    let realm = new Realm({
     path: fs.MainBundlePath + '/attraction.realm',
@@ -41,10 +43,6 @@ export default class AttractionProvider extends React.Component {
     // Console Attraction lenght and object
     this.setState({ attractions });
   }
-
-  // componentDidUpdate() {
-  //   this.persistContext.persistState({ ...this.state });
-  // }
 
   handleAttractionChange(attraction) {
     console.log("attraction is:", attraction);
