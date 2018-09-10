@@ -35,6 +35,7 @@ export const fontWeight ={
 
 export const fontFamiliy ={
   primary: 'ProximaNova-Regular',
-  primaryBold:'ProximaNovaA-Bold',
+  primaryBold:'ProximaNova-Bold',
   type:'SweetMovementsPersonalUse' 
+
 }

@@ -20,7 +20,7 @@ export default class Splash extends Component<Props> {
     clearTimeout(this.timer);
   }
   componentDidMount() {
-   //  AsyncStorage.clear();
+    // AsyncStorage.clear();
 
     this.getUserInfo();
   }
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 60,
     fontWeight: "600",
-    fontFamily: fontFamiliy.type
+    fontFamily: fontFamiliy.type,
+    padding:30
   }
 });

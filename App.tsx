@@ -8,7 +8,7 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "./Navigation";
 import UserContext from "./src/User/UserContext";
-
+import AttractionsContext from "./src/Attractions/containers/AttractionsContext";
 
 console.disableYellowBox = true;
 
@@ -16,9 +16,11 @@ interface Props {}
 export default class App extends Component<Props> {
   render() {
     return (
-      <UserContext>
-        <Navigation />
-      </UserContext>
+      <AttractionsContext>
+        <UserContext>
+          <Navigation />
+        </UserContext>
+      </AttractionsContext>
     );
   }
 }

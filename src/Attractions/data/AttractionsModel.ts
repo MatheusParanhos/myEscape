@@ -1,6 +1,6 @@
 import * as Realm from "realm";
 
-export class Attraction {
+export class AttractionSchema {
   public static schema: Realm.ObjectSchema = {
     name: "Attraction",
     primaryKey: "id",
@@ -10,18 +10,20 @@ export class Attraction {
       city: "string",
       rate: "int",
       description: "string",
+      image:"string",
       cost: "int",
       gettingThere: "string",
       gettingThereDuration: "int",
       guideNecessity: "int",
-      nearRestaurants: "Restaurant[]"
+      nearRestaurants: "string"
     }
   };
-  public id: string;
+  public id: number;
   public title: string;
   public city: string;
   public rate: number;
   public description: string;
+  public image: any;
   public cost: number;
   public gettingThere: string;
   public gettingThereDuration: number;
@@ -29,11 +31,12 @@ export class Attraction {
   public nearRestaurants: any;
 
   constructor(
-    id: string,
+    id: number,
     title: string,
     city: string,
     rate: number,
     description: string,
+    image: any,
     cost: number,
     gettingThere: string,
     gettingThereDuration: number,
@@ -45,6 +48,7 @@ export class Attraction {
     this.city = city;
     this.rate = rate;
     this.description = description;
+    this.image = image;
     this.cost = cost;
     this.gettingThere = gettingThere;
     this.gettingThereDuration = gettingThereDuration;

@@ -4,15 +4,38 @@ import Header from "../../Shared/components/Header";
 import Attraction from "../components/Attraction";
 import Spacer from "../../Shared/components/Spacer";
 import AttractionsContainer from "../containers/AttractionsContainer";
+import Realm from "realm";
+import { AttractionSchema } from "../data/AttractionsModel";
 
 interface Props {}
 
 export default class AttractionsScreen extends Component<Props> {
+  // componentDidMount() {
+  //   let realm = new Realm({ schema: [AttractionSchema.schema] });
+  //   realm.write(() => {
+  //     let attraction = new AttractionSchema(
+  //       5,
+  //       "bar",
+  //       "foo",
+  //       5,
+  //       "foo",
+  //       5,
+  //       "foo",
+  //       5,
+  //       5,
+  //       "bar"
+  //     );
+  //     realm.create(AttractionSchema.schema.name, attraction);
+  //   });
+
+  //   console.log("Done", realm.objects(AttractionSchema.schema.name));
+  //   realm.close();
+  // }
   render() {
     return (
       <View style={styles.container}>
-        <Header title={"Atrações"} filter/>
-        <Spacer title={'Atrações'} />
+        <Header title={"Atrações"} filter />
+        <Spacer title={"Atrações"} />
         <AttractionsContainer />
         {/* <Attraction
           attractionTitle={"Vista secreta"}

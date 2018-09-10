@@ -5,7 +5,6 @@ import { NavigationScreenProps } from "react-navigation";
 import { AsyncStorage } from "react-native";
 import { colors, fontFamiliy, deviceHeight, deviceWidth } from "../theme";
 
-
 var TimerMixin = require("react-timer-mixin");
 
 export default class SplashPlaceholder extends Component {
@@ -13,13 +12,16 @@ export default class SplashPlaceholder extends Component {
     return (
       <View style={styles.container}>
         <Text
-            style={{
-              color: colors.white,
-              fontSize: 60,
-              fontWeight: '600',
-              fontFamily: fontFamiliy.type,
-            }}
-          >my escape</Text>
+          style={{
+            color: colors.white,
+            fontSize: 60,
+            fontWeight: "600",
+            fontFamily: fontFamiliy.type,
+            padding: 50
+          }}
+        >
+          my escape
+        </Text>
       </View>
     );
   }
@@ -27,12 +29,12 @@ export default class SplashPlaceholder extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    position:'absolute',
-    height:deviceHeight,
-    width:deviceWidth,
-    justifyContent:'center',
-    alignItems:'center',
-    zIndex:-1,
+    position: "absolute",
+    height: deviceHeight,
+    width: deviceWidth,
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: -1,
     backgroundColor: colors.primary
   }
 });

@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 60,
     fontWeight: "600",
-    fontFamily: fontFamiliy.type
+    fontFamily: fontFamiliy.type,
+    padding:15
   },
   tabViewContainer: { flex: 1, width: "100%" }
 });

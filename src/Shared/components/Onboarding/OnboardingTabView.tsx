@@ -40,7 +40,7 @@ export class OnboardingTabView extends React.Component<Props> {
           <OutlinedButton
             title={"Descubra"}
             name={undefined}
-            onPress={() => this.props.navigation.navigate("App")}
+            onPress={() => this.props.navigation.navigate("Atrações")}
           />
           <View style={styles.halfSpacer} />
         </View>
@@ -60,28 +60,32 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "600",
     fontFamily: fontFamiliy.primaryBold,
-    textAlign: "center"
+    textAlign: "center",
+    marginHorizontal:50
   },
   text2: {
     color: colors.white,
     fontSize: 15,
     fontWeight: "600",
     fontFamily: fontFamiliy.primaryBold,
-    textAlign: "center"
+    textAlign: "center",
+
   },
   text3: {
     color: colors.white,
     fontSize: 30,
     fontWeight: "600",
     fontFamily: fontFamiliy.primaryBold,
-    textAlign: "center"
+    textAlign: "center",
+    marginHorizontal:50
   },
   text4: {
     color: colors.white,
     fontSize: 30,
     fontWeight: "600",
     fontFamily: fontFamiliy.primaryBold,
-    textAlign: "center"
+    textAlign: "center",
+    padding:10
   },
   spacer: {
     height: 30
