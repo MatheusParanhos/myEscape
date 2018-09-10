@@ -1,5 +1,7 @@
 my escape app currently under development with react-native.
 
+showcase: https://youtu.be/_Fuckq6n98Q
+
 To run this project clone, yarn it and react-native link
 thanks!
 
