@@ -10,7 +10,8 @@
         "gettingThere": "facin!",
         "gettingThereDuration": 30,
         "guideNecessity": 2,
-        "nearRestaurants": "algum"
+        "nearRestaurants": "algum",
+        "saved": false
     },
     {
         "id":6,
@@ -23,7 +24,7 @@
         "gettingThere": "facin!",
         "gettingThereDuration": 30,
         "guideNecessity": 2,
-        "nearRestaurants": "alguns"
-       
+        "nearRestaurants": "alguns",
+        "saved": false
     }
 ]

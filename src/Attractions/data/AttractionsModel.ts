@@ -15,7 +15,8 @@ export class AttractionSchema {
       gettingThere: "string",
       gettingThereDuration: "int",
       guideNecessity: "int",
-      nearRestaurants: "string"
+      nearRestaurants: "string",
+      saved: "bool"
     }
   };
   public id: number;
@@ -29,6 +30,7 @@ export class AttractionSchema {
   public gettingThereDuration: number;
   public guideNecessity: number;
   public nearRestaurants: any;
+  public saved: boolean;
 
   constructor(
     id: number,
@@ -41,7 +43,8 @@ export class AttractionSchema {
     gettingThere: string,
     gettingThereDuration: number,
     guideNecessity: number,
-    nearRestaurants: any
+    nearRestaurants: any,
+    saved: boolean,
   ) {
     this.id = id;
     this.title = title;
@@ -54,5 +57,6 @@ export class AttractionSchema {
     this.gettingThereDuration = gettingThereDuration;
     this.guideNecessity = guideNecessity;
     this.nearRestaurants = nearRestaurants;
+    this.saved = saved;
   }
 }

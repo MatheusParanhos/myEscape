@@ -8,14 +8,15 @@ import fs from "react-native-fs";
 import Realm from "realm";
 export const UserContext = React.createContext({
   user: "",
-  saveAttraction: attraction => {
-    console.log(attraction)
+  saveUserAttraction: attraction => {
+    console.log(attraction);
   }
 });
 interface UserProviderInterface {
   user: any;
   value: any;
   state: any;
+  savedAttractions: any;
 }
 export default class UserProvider extends Component<UserProviderInterface> {
   constructor() {
@@ -30,41 +31,69 @@ export default class UserProvider extends Component<UserProviderInterface> {
       // path: fs.MainBundlePath + "/default.realm",
       schema: [UserSchema.schema, AttractionSchema.schema]
     });
-    
   }
-  handleSaveAttraction (attraction) {
-    console.log("attraction is:", attraction)
+  handleSaveAttraction(Attraction) {
+    console.log("attraction is:", Attraction);
     // Write user
-   Realm.open({schema: [UserSchema.schema, AttractionSchema.schema]})
-   .then(realm => {
-    let baraka = realm.objects('User')
-    console.log(baraka[0])
-    // realm.write(() => {
+    Realm.open({ schema: [UserSchema.schema, AttractionSchema.schema] }).then(
+      realm => {
+        realm.write(() => {
+          let user = realm.create(
+            "User",
+            {
+              id: 1,
+              username: "user",
+            },
+            true
+          );
+          console.log(user);
+          //user.savedAttractions = user.savedAttractions.concat([Attraction.id])
+          user.savedAttractions.push(
+            realm.create(
+              "Attraction",
+              {
+                id: Attraction.id,
+                title: Attraction.title,
+                city: Attraction.city,
+                rate: Attraction.rate,
+                description: Attraction.description,
+                image: Attraction.image,
+                cost: Attraction.cost,
+                gettingThere: Attraction.gettingThere,
+                gettingThereDuration: Attraction.gettingThereDuration,
+                guideNecessity: Attraction.guideNecessity,
+                nearRestaurants: Attraction.nearRestaurants,
+                saved: Attraction.saved
+              },
+              true
+            )
+          );
+          console.log(user);
+        });
 
-    // })
-    // realm.write(() => {
-    //   let baraka = realm.create("User", {
-    //     id: 8,
-    //     username: "barakao",
-    //     age: 25,
-    //     gender: "male",
-    //     savedAttractions: []
-    //   }, true);
-    //   baraka.savedAttractions.push(attraction)
-    // });
-    let SavedAttractions = realm.objects('User');
-    console.log(SavedAttractions[1])
-    console.log({SavedAttractions})
-    console.log(SavedAttractions[5])
-    
-   })
+        // realm.write(() => {
+
+        // })
+        // realm.write(() => {
+        //   let baraka = realm.create("User", {
+        //     id: 8,
+        //     username: "barakao",
+        //     age: 25,
+        //     gender: "male",
+        //     savedAttractions: []
+        //   }, true);
+        //   baraka.savedAttractions.push(attraction)
+        // });
+        let SavedAttractions = realm.objects("User");
+      }
+    );
   }
   render() {
     return (
       <UserContext.Provider
         value={{
           user: this.state.user,
-          saveAttraction: attraction => this.handleSaveAttraction(attraction)
+          saveUserAttraction: attraction => this.handleSaveAttraction(attraction)
         }}
       >
         {this.props.children}

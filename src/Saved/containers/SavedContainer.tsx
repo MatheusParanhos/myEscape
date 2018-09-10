@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import { Text, View, FlatList } from "react-native";
-import attractionsData from "../data/attractions.json";
-import Attraction from "../components/Attraction";
-import { AttractionsContext } from "./AttractionsContext";
-import { AttractionSchema } from "../data/AttractionsModel";
+import { AttractionsContext } from "../../Attractions/containers/AttractionsContext";
 import fs from "react-native-fs";
 import Realm from "realm";
 import { UserContext } from "../../User/UserContext";
+import Attraction from "../../Attractions/components/Attraction";
 
-export default class AttractionsContainer extends Component {
+export default class SavedContainer extends Component {
   // constructor() {
   //   super();
   //   this.state = {
@@ -20,12 +18,10 @@ export default class AttractionsContainer extends Component {
     // console.log({attractionsData})
     // console.log(attractionsData)
     return (
-      <UserContext.Consumer>
-        {({ saveUserAttraction }) => (
           <AttractionsContext.Consumer>
-            {({ attractions, saveAttraction }) => (
+            {({ savedAttractions, saveAttraction }) => (
               <FlatList
-                data={attractions}
+                data={savedAttractions}
                 style={{ flex: 1 }}
                 renderItem={({ item }) => {
                   return (
@@ -34,7 +30,6 @@ export default class AttractionsContainer extends Component {
                       source={`${item.image}`}
                       onSavePress={() => {
                         // console.log(item);
-                        saveUserAttraction(item)
                         saveAttraction(item)
                         // setAttraction(item);
                       }}
@@ -46,8 +41,6 @@ export default class AttractionsContainer extends Component {
               />
             )}
           </AttractionsContext.Consumer>
-        )}
-      </UserContext.Consumer>
     );
   }
 }
