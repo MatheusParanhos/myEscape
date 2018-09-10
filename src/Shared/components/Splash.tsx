@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationScreenProps } from "react-navigation";
 import { AsyncStorage } from "react-native";
 import { colors, fontFamiliy } from "../theme";
+import initializeDatabase from "../../Attractions/functions/initDatabase";
 
 interface Props extends NavigationScreenProps<any> {}
 
@@ -28,6 +29,7 @@ export default class Splash extends Component<Props> {
     AsyncStorage.getItem("userInfo").then(response => {
       if (response === null) {
         this.setState({ firstTime: true });
+        initializeDatabase()
         AsyncStorage.setItem("userInfo", "user's first entry to the App!");
         this.timer = setTimeout(() => {
           this.props.navigation.navigate("Onboarding");

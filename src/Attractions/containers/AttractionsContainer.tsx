@@ -31,7 +31,7 @@ export default class AttractionsContainer extends Component {
                   return (
                     <Attraction
                       attractionTitle={item.title}
-                  //    source={`${item.attractionImage}`}
+                      source={`${item.image}`}
                       onSavePress={() => {
                         console.log(item);
                         saveAttraction(item)

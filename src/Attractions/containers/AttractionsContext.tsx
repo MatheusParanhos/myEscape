@@ -1,7 +1,8 @@
 import React from "react";
-import { AttractionSchema } from "../data/AttractionsModel";
+import initializeDatabase from '../functions/initDatabase'
 import fs from "react-native-fs";
 import Realm from "realm";
+import { AttractionSchema } from "../data/AttractionsModel";
 
 export const AttractionsContext = React.createContext({
   name: "Attraction",
@@ -21,7 +22,6 @@ export default class AttractionProvider extends React.Component {
   attraction: {};
   constructor() {
     super();
-    //this.persistContext = new PersistContext("AttractionContext", initialState);
     this.state = {
       attractions:{},
       attraction: {}
@@ -30,41 +30,16 @@ export default class AttractionProvider extends React.Component {
 
   componentDidMount() {
     console.log('comp will mount')
-    // Open Database with filesystem attached
-    console.log(fs.MainBundlePath)
-    let realm = new Realm({
-      path: fs.MainBundlePath + '/attraction.realm',
-      schema: [AttractionSchema.schema]
-    });
-    console.log(realm)
-   // Write attractions
-    // realm.write(() => {
-    //   let attr = new AttractionSchema(
-    //     11,
-    //     "Cachoeira vrau",
-    //     "Alto paraiso",
-    //     5,
-    //     "Foda!",
-    //     "opa",
-    //     50,
-    //     "facin",
-    //     30,
-    //     1,
-    //     "varios"
-    //   );
-    //   realm.create(AttractionSchema.schema.name, attr)
-    // });
+    // Open Database
+   let realm = new Realm({
+    path: fs.MainBundlePath + '/attraction.realm',
+    schema: [AttractionSchema.schema]
+  });
     const attr = realm.objects(AttractionSchema.schema.name)
     // Read attraction from realm object
     const attractions = realm.objects("Attraction");
     // Console Attraction lenght and object
-    console.log(attr)
-    console.log(attractions)
-    console.log(attr.length)
-    console.log(attractions.length);
-    console.log(attractions[0]);
     this.setState({ attractions });
-    console.log(this.state.attractions)
   }
 
   // componentDidUpdate() {
