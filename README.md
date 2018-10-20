@@ -1,4 +1,5 @@
 my escape app currently under development with react-native.
+I just realized this name is so my space
 
 showcase: https://youtu.be/_Fuckq6n98Q
 
@@ -12,22 +13,22 @@ have to go to node_modules/react-native-scrollable-tab-view/SceneComponent.js an
 
 * Front-end Project Roadmap
 
-- Refactor code/detatch some (junk code) logic from certain components
-- Apply Render props approach to certain components
-- Create unit testings 
+- Refactor code/detatch some (junk code) from certain components
+- Unit tests
 
 When backend is setup
 
 - Add Apollo client for graphql
-- Add Authentication
+- Add Authentication -optional-
+
 - Update data fetching in Attractions and Stayings
-- Create Rides service
+- Create Rides 
 
 
 * Back-end Project Roadmap
-- Create dockerized typescript-node backend -DONE-
+
 - Setup local environment -DONE-
 - Integrate with cicle ci -DONE-
-- Deploy to EC2 instance running with docker
-- Integrate with circle ci for full production deployment 
+
+- Setup AppSync -InProgress-
 
