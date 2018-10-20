@@ -28,6 +28,6 @@ When backend is setup
 - Create dockerized typescript-node backend -DONE-
 - Setup local environment -DONE-
 - Integrate with cicle ci -DONE-
-- Deploy to EC2 instance running with docker-compose
+- Deploy to EC2 instance running with docker
 - Integrate with circle ci for full production deployment 
 
