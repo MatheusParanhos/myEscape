@@ -1,4 +1,4 @@
-my escape app currently under development with react-native.
+my escape app idea
 I just realized this name is so my space
 
 showcase: https://youtu.be/_Fuckq6n98Q
