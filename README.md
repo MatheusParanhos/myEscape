@@ -1,4 +1,7 @@
 my escape app idea
+
+* OBS: This is only a study of some technologies and libraries. Didn't use code best practises
+
 I just realized this name is so my space
 
 showcase: https://youtu.be/_Fuckq6n98Q
